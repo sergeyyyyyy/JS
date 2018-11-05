@@ -60,8 +60,7 @@ var a;
 
 var a = {
     name:"Xan",
-    age: 25,
-    checked:false};
+    age: 25};
 function check() {
     a.checked = true
 }
