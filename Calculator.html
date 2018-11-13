@@ -1,0 +1,40 @@
+<!DOCUMENT html>
+<html>
+  <head></head>
+<body>
+    <div id="display">
+    <div id="displayTop">0</div>
+    <div id="displayMain">0</div></div><br>
+        <button onclick="knopki('7')">7</button>
+        <button onclick="knopki('8')">8</button>
+        <button onclick="knopki('9')">9</button>
+        <button onclick="operation('-')">-</button><br>
+
+        <button onclick="knopki('4')">4</button>
+        <button onclick="knopki('4')">4</button>
+        <button onclick="knopki('6')">6</button>
+        <button onclick="operation('+')">+</button><br>
+
+        <button onclick="knopki('1')">1</button>
+        <button onclick="knopki('2')">2</button>
+        <button onclick="knopki('3')">3</button>
+        <button onclick="operation('/')">/</button><br>
+
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="knopki('0')">0</button>
+        <button onclick="operation('*')">*</button><br>
+        <button id="equalSign" onclick="ravno()">=</button><br>
+        <br><br>
+    <div id="history">
+        <ol>
+            <li id="history1"></li>
+            <li id="history2"></li>
+            <li id="history3"></li>
+            <li id="history4"></li>
+            <li id="history5"></li>
+        </ol>
+
+    </div>
+    <script src=Calculator.js></script>
+</body>
+</html>
