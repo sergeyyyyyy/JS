@@ -1,0 +1,95 @@
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>ВТОРАЯ МММ</title>
+        <link rel="stylesheet" href="tesc.css">
+    </head>
+    <body>
+            <p><img src="mmm.jpg" width="805" height="100"></p>
+            <hr/>
+            <table>
+                <tr> <b>ЗАДАЙ ИМЯ И БЮДЖЕТ КОМПАНИИ:</b></tr>
+                <tr align = "center">
+                    <td  class="start"> 
+                        Имя:<input type="text" class="inputText" id="nameCompany">    
+                    </td>
+                </tr>
+                <tr  align = "center">
+                    <td class="start"> 
+                        Бюджте:<input type="number" class="inputText" id="moneyCompany">
+                    </td>
+                </tr>
+                <tr  align = "center">
+                    <td class="start">
+                        <input type="button" class="inputButton" value="старт" id="startButton">
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tik"> </td>      
+                </tr>   
+                <tr>
+                     <td id="money"></td>
+                </tr>  
+                <tr align = "center" class="buttonCenter visible" id="visibleAdd">
+                        <td>  
+                            <p align = "center"><b>Проект:</b></p>
+                            Название:
+                            <input type="text" id="nameProject"> <br>
+                            Кол-во строк кода:
+                            <input type="number" id="kolStrokProject"><br>
+                            Стоимость:
+                            <input type="number" id="costProject"><br>
+                            <input type="button" class="addButton" value="Добавить" id="addProject"> 
+                        </td>
+                        <td>
+                                <p align = "center"><b>Менеджер:</b></p>
+                                Фамилия:
+                                <input type="text" id="lastNameManager"><br>
+                                Имя:
+                                <input type="text" id="nameManager"> <br>
+                                Опыт:
+                                <input type="number"id="expirienceManager"><br>    
+                            <input type="button" class="addButton" value="Добавить" id="addManager">  
+                        </td>
+                        <td>
+
+                                <p align = "center"><b>Программист:</b></p>
+                                Фамилия:
+                                <input type="text" id="lastNameProger"><br>
+                                Имя:
+                                <input type="text" id="nameProger"> <br>
+                                Уровень:
+                                <select id="levelProger">
+                                    <option>junior</option>
+                                    <option>midle</option>  
+                                    <option>senior</option>
+                                </select><br>    
+
+                            <input type="button" class="addButton" value="Добавить" id="addProger">
+                        </td>
+                </tr> 
+                <tr align = "center">
+                    <td>
+                        <table  id="insertProject"></table>
+                    </td>
+                    <td>
+                        <table id="insertManager"></table>
+                    </td>
+                    <td>
+                        <table id="insertProger"></table>
+                    </td>                  
+                </tr>
+                <tr>
+                    <td colspan="3" id="block"></td>
+                </tr>
+            </table>
+            <hr/>
+            <div class="warning visible" id="visibleWarning">
+                    <p id="warning"></p>
+                </div>           
+        <script src="game_.js"></script>
+        <script src="project_.js"></script>
+        <script src="manager_.js"></script>
+        <script src="proger_.js"></script>
+    </body>
+</html>

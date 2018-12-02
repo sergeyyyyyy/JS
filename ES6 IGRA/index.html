@@ -1,0 +1,107 @@
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+            <table>
+                <tr>
+                    <td colspan="3" class="start">
+                       <input type="text" class="inputText" placeholder="Название компании" id="nameCompany">
+                       <input type="number" class="inputText" placeholder="Бюджет" id="moneyCompany"> 
+                       <input type="button" class="inputButton" value="Начать игру" id="startButton"> 
+                       
+                    </td>
+
+                </tr>
+                
+                <tr>
+                        <td colspan="2" id="tik">
+                                
+                        </td>
+                </tr>   
+
+                <tr>
+                        <td colspan="2" id="money" >
+                            Бюджет компании: 
+                        </td>
+                </tr>  
+
+                <tr id="visibleAdd">
+                        <td>  
+                            <p>Добавление проекта</p>
+                            Название:
+                            <input type="text" placeholder="Название" id="nameProject"> <br>
+                            Стоимость:
+                            <input type="number" placeholder="Стоимость" id="costProject"><br>
+                            Количество строк кода:
+                            <input type="number" placeholder="Количество строк" id="strokiProject"><br>
+                            
+                            <input type="button" class="addButton" value="Добавить проект" id="addProject"> 
+                        </td>
+                        <td>
+                            <p>Добавление менеджера</p>
+                             Имя:
+                             <input type="text" placeholder="Имя" id="nameManager"> <br>
+                             Фамилия:
+                             <input type="text" placeholder="Фамилия" id="lastNameManager"><br>
+                             Опыт:
+                            <input type="number" placeholder="Опыт" id="expirienceManager"><br>    
+
+                            <input type="button" class="addButton" value="Добавить менеджера" id="addManager">  
+                        </td>
+
+                        <td>
+                            <p>Добавление программиста</p>
+                            Имя:
+                            <input type="text" placeholder="Имя" id="nameProger"> <br>
+                            Фамилия:
+                            <input type="text" placeholder="Фамилия" id="lastNameProger"><br>
+                            Уровень:
+                            <select id="levelProger">
+                                <option selected>junior</option>
+                                <option>midle</option>
+                                <option>senior</option>
+                            </select><br>    
+
+                            <input type="button" class="addButton" value="Добавить программиста" id="addProger">
+                        </td>
+                </tr>      
+
+                <tr>
+                    <td>
+                        <table  id="insertProject"> 
+                            <p> Проекты для выполнения</p>
+                        </table>
+
+                    </td>
+
+                    <td>
+                        <table id="insertManager">
+                            <p>Свободные менеджер</p>
+                        </table>
+                    </td>
+                    
+                    <td>
+                        <table id="insertProger">
+                            <p>Свободные программисты</p>
+                        </table>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="3" id="block"></td>
+                </tr>
+
+            </table>
+            
+            <div>
+                    <p id="GG"></p>
+            </div>
+            
+        <script src="ggame.js"></script>
+        <script src="ggmanager.js"></script>
+        <script src="ggproger.js"></script>
+        <script src="ggproject.js"></script>
+    </body>
+</html>
