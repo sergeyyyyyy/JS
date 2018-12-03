@@ -31,8 +31,8 @@ getExpirience(){
         }
     }
 
-      setStatus(tr){
-        this.status=tr;
+      setStatus(bool){
+        this.status=bool;
     }
 
   zveno(project,proger){
@@ -40,10 +40,11 @@ getExpirience(){
         this.project=project;
             this.proger=proger;
             this.id=project.getIdProject();
-        addBlock(this.idManager,this.name,this.lastName,this.expirience,project,proger); 
+       Manager.addBlock(this.idManager,this.name,this.lastName,this.expirience,project,proger); 
     }
 
     static addBlock(id,name,lastName,expirience,project,proger){
+
               const table=document.getElementById("block");
             const row = document.createElement("tr");
                const statusProject = document.createElement("td");
@@ -51,6 +52,7 @@ getExpirience(){
               const dataProject= document.createElement("td");
             const ostalosNapisat = document.createElement("td");
              const progers = document.createElement("td");
+
             statusProject.appendChild(document.createTextNode("Выполняется"));
               statusProject.id="status"+id;
               row.appendChild(statusProject);
@@ -72,7 +74,7 @@ getExpirience(){
     }
 
     tik(){
-          let budgetCompany=document.getElementById("money").innerHTML;
+         let budgetCompany=document.getElementById("money").innerHTML;
        let ostalosStrok=document.getElementById("kolStrok"+this.id).innerHTML;
           ostalosStrok=ostalosStrok.substring(16,ostalosStrok.length);
          for(let i=0;i<this.proger.length;i++){

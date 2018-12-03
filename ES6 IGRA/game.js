@@ -71,8 +71,7 @@ function funct(){
                     insertManager(manager[idManager]);
                     idManager++;
                     let m=i;
-                    
-                    let arrAdd = manager[i].getJobProger();
+                     var arrAdd = manager[i].getJobProger();
                     for(let i=0;i<arrAdd.length;i++){
                         proger[idProger]=new Proger(idProger,arrAdd[i].getName(),arrAdd[i].getLastName(),arrAdd[i].getLevel());
                         insertProger(proger[idProger]);
@@ -80,16 +79,17 @@ function funct(){
                     }
 
                     manager[m]=null; 
+
                 }
          }
      }
 }
 
-function Manager(){
+function provManager(){
     if(manager.length===0) {
         return false;
     }else{
-    for(let k=0;k<manager.length;k++){
+    for(var k=0;k<manager.length;k++){
         if(manager[k]!==null && manager[k].getStatus()) {
         return true;    
         }
@@ -98,7 +98,7 @@ function Manager(){
 }
 }
 
-function Proger(){
+function provProger(){
     if(proger.length===0) {
         return false;
     }else{
@@ -111,7 +111,7 @@ function Proger(){
 }
 }
 
-function Project(){
+function provProject(){
     if(project.length===0) {
         return false;
     }else{
@@ -229,12 +229,12 @@ function addProger(){
 }
 
 function insertProger(proger){
-    const tableInsertProger=document.getElementById("insertProger");
-    const row = document.createElement("tr");
-    const cell = document.createElement("td");
-    const idProger="p"+proger.getIdProger();
+    var tableInsertProger=document.getElementById("insertProger");
+    var row = document.createElement("tr");
+    var cell = document.createElement("td");
+    var idProger="p"+proger.getIdProger();
 
-    const deleted=document.createElement("input");
+    var deleted=document.createElement("input");
     deleted.id=idProger;
     deleted.type="button";
     deleted.value="Снять ";
@@ -242,7 +242,7 @@ function insertProger(proger){
         cell.parentElement.removeChild(cell);
     }
 
-    let str=document.createTextNode(proger.getName()+" "+proger.getLastName()+" ");
+    var str=document.createTextNode(proger.getName()+" "+proger.getLastName()+" ");
     cell.appendChild(str);
     cell.appendChild(deleted);
     row.appendChild(cell);

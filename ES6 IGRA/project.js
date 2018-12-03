@@ -31,7 +31,7 @@ class Project{
         }
     }
 
-    setStatus(tr){
-        this.status=tr;
+    setStatus(bool){
+        this.status=bool;
     }
 }
